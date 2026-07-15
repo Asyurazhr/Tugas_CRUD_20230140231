@@ -43,4 +43,9 @@ public class KtpController {
         return service.update(id, dto);
     }
 
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable Integer id) {
+        service.delete(id);
+        return "Data berhasil dihapus";
+    }
 }

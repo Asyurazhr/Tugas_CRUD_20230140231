@@ -28,4 +28,14 @@ public class KtpController {
         }
     }
 
+    @GetMapping
+    public List<KtpEntity> getAll() {
+        return service.getAll();
+    }
+
+    @GetMapping("/{id}")
+    public KtpEntity getById(@PathVariable Integer id) {
+        return service.getById(id);
+    }
+
 }

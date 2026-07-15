@@ -16,4 +16,7 @@ import java.util.List;
 @CrossOrigin(origins = "*") // Supaya bisa diakses dari file HTML (Frontend)
 public class KtpController {
 
+    @Autowired
+    private KtpService service;
+
 }

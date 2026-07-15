@@ -19,4 +19,13 @@ public class KtpController {
     @Autowired
     private KtpService service;
 
+    @PostMapping
+    public ResponseEntity<?> create(@RequestBody KtpDto dto) {
+        try {
+            return ResponseEntity.ok(service.create(dto));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
 }
